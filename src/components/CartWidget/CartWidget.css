@@ -1,0 +1,8 @@
+.Carrito{
+    display: flex;
+    align-items: center;
+}
+
+p{
+    margin-left: 2px;
+}

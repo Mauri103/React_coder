@@ -1,0 +1,22 @@
+nav{
+    background-color: rgb(66, 65, 65);
+    
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    margin: 0px;
+}
+
+ul li{
+    color: white;
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
+}
