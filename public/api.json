@@ -1,0 +1,52 @@
+ 
+[
+  
+  {
+    "id": 1,
+    "nombre": "Camiseta Calavera",
+    "categoria": "Camiseta",   
+    "category":"1",   
+    "imagen": "/img/imagen1.jpg",
+    "precio": "$690"
+  },
+  {
+    "id": 2,
+    "nombre": "Camiseta Naruto",
+    "categoria": "Camiseta",   
+    "category":"1",   
+    "imagen": "/img/imagen2.jpg",
+    "precio": "$690"
+  },
+  {
+    "id": 3,
+    "nombre": "Camiseta Azul",
+    "categoria": "Camiseta",  
+    "category":"1",   
+    "imagen": "/img/imagen3.png",
+    "precio": "$650"
+  },
+  {
+    "id": 4,
+    "nombre": "Camiseta Ratoncitos",
+    "categoria": "Camiseta", 
+    "category":"1",   
+    "imagen": "/img/imagen4.png",
+    "precio": "$720"
+  },
+  {
+    "id": 5,
+    "nombre": "Remera blanca",
+    "categoria": "Camiseta",    
+    "category":"1",   
+    "imagen": "/img/imagen5.png",
+    "precio": "$590"
+  },
+  {
+    "id": 6,
+    "nombre": "Pantalon Gris",
+    "categoria": "Pantalon", 
+    "category":"2",   
+    "imagen": "/img/pantalon1.png",
+    "precio": "$2100"
+  }
+]
