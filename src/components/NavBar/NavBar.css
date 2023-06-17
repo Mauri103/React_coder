@@ -12,11 +12,11 @@ ul{
     margin: 0px;
 }
 
-ul li{
+.li{
     color: white;
 }
 
-ul li a{
+.li a{
     text-decoration: none;
     color: white;
 }
