@@ -1,15 +1,17 @@
-import React, { useState , useEffect }from 'react'
+import React, { useEffect, useState } from 'react'
 import ItemListContainer from '../../components/ItemListContainer/ItemListContainer'
-import { useParams } from 'react-router-dom'
 import axios from "axios"
+import { useParams } from 'react-router-dom'
 
 
-const PantalonesPage = () => {
-
-    let { id } = useParams();
+const RemerasPage = () => {
 
     const url = "http://localhost:3000/api.json"
     const [productos, setProduct] = useState([]);
+
+    let { categoryId } = useParams();
+
+    console.log(categoryId)
 
     useEffect(() => {
       axios(url).then(json => 
@@ -17,13 +19,15 @@ const PantalonesPage = () => {
     }, []);
 
 
-    let filtroProductos = productos.filter((producto) => {
-      return producto.id == id;
+    let filtroCategoria = productos.filter((producto) => {
+      return producto.category == categoryId;
     })
+
+  
    
-    return (
-      <div className='contenido'>       
-            {filtroProductos.map(( producto ) => {
+  return (
+    <div className='contenido'>       
+            {filtroCategoria.map(( producto ) => {
                 return(
                     <div key={producto.id}>
                         <ItemListContainer 
@@ -33,10 +37,8 @@ const PantalonesPage = () => {
                 );
             })};
         </div>
-    )
+   )
   
 }
 
-export default PantalonesPage
-
-
+export default RemerasPage;

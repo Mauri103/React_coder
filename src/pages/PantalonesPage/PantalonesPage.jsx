@@ -1,31 +1,42 @@
-import React from 'react'
-import data from "../../api.json"
+import React, { useEffect, useState } from 'react'
 import ItemListContainer from '../../components/ItemListContainer/ItemListContainer'
+import axios from "axios"
+import { useParams } from 'react-router-dom'
+
 
 const PantalonesPage = () => {
 
-  const findElement = (data, categoria) => {
-    for (let i = 0; i < data.length; i++) {
-      const element = data[i];
-      if (element.categoria === categoria) {
-        return element;
-      }
-    }
-    return -1;
-  }
+    const url = "http://localhost:3000/api.json"
+    const [productos, setProduct] = useState([]);
 
-  let producto = findElement(data, "Pantalon")
+    let { categoryId } = useParams();
+
+    console.log(categoryId)
+
+    useEffect(() => {
+      axios(url).then(json => 
+        setProduct(json.data.products));
+    }, []);
+
+
+    let filtroCategoria = productos.filter((producto) => {
+      return producto.category == categoryId;
+    })
+
+  
    
   return (
-    <div className='contenido'>              
-          <ItemListContainer 
-             key={producto.id}
-             nombre={producto.nombre}
-             precio ={producto.precio}
-             categoria={producto.categoria}
-             imagen={producto.imagen}
-            />
-     </div>
+    <div className='contenido'>       
+            {filtroCategoria.map(( producto ) => {
+                return(
+                    <div key={producto.id}>
+                        <ItemListContainer 
+                            producto = { producto }
+                        />
+                   </div> 
+                );
+            })};
+        </div>
    )
   
 }

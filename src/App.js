@@ -8,6 +8,7 @@ import Navbar from './components/NavBar/NavBar';
 import HomePage from "./pages/HomePage/HomePage";
 import PantalonesPage from "./pages/PantalonesPage/PantalonesPage";
 import ItemDetailContainerPage from "./pages/ItemDetailContainerPage/ItemDetailContainerPage";
+import RemerasPage from "./pages/RemerasPage/RemerasPage";
 
 
 
@@ -19,7 +20,8 @@ const App  = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/category/2" element={<PantalonesPage />} />
+          <Route path="/category/:categoryId" element={<PantalonesPage />} />
+          <Route path="/category/:categoryId" element={<RemerasPage />} />
           <Route path="/detail/:id" element={<ItemDetailContainerPage />} />
         </Routes>
       </div>

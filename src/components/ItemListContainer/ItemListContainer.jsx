@@ -6,23 +6,23 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 
-const ItemListContainer = (props) => {
-
+const ItemListContainer = ({ producto }) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
-        <CardMedia component="img" className="imgItem" src={props.imagen}  alt="" />
+        <CardMedia component="img" className="imgItem" src={producto.imagen}  alt="" />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {props.nombre}
+            {producto.nombre}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {props.categoria} | {props.precio}
+            {producto.categoria} | {producto.precio}
           </Typography>
         </CardContent>
       </CardActionArea>
     </Card>
   );
+
 };
 
 export default ItemListContainer;
