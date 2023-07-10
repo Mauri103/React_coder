@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 
@@ -6,9 +6,8 @@ import './App.css';
 import Header from "./components/Header/Header";
 import Navbar from './components/NavBar/NavBar';
 import HomePage from "./pages/HomePage/HomePage";
-import PantalonesPage from "./pages/PantalonesPage/PantalonesPage";
-import ItemDetailContainerPage from "./pages/ItemDetailContainerPage/ItemDetailContainerPage";
-import RemerasPage from "./pages/RemerasPage/RemerasPage";
+import CategoryPage from "./pages/CategoryPage/CategoryPage";
+import DetailPage from "./pages/DetailPage/DetailPage";
 
 
 
@@ -20,9 +19,9 @@ const App  = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/category/:categoryId" element={<PantalonesPage />} />
-          <Route path="/category/:categoryId" element={<RemerasPage />} />
-          <Route path="/detail/:id" element={<ItemDetailContainerPage />} />
+          <Route path="/category/:categoryId" element={<CategoryPage />} />
+          <Route path="/category/:categoryId" element={<CategoryPage />} />
+          <Route path="/detail/:id" element={<DetailPage />} />
         </Routes>
       </div>
     </Router>
