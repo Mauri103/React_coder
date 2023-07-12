@@ -1,6 +1,6 @@
 import * as React from "react";
-import Button from '@mui/material/Button';
 import "./ItemDetailContainer.css"
+import AddCartButton from "../AddCartButton/AddCartButton";
 
 const ItemDetailConteiner = ({ product }) => {
   return (
@@ -19,9 +19,7 @@ const ItemDetailConteiner = ({ product }) => {
               <h3>$ {product.price}</h3>
           </div>
           <div>
-            <Button variant="contained" color="primary">
-                Agregar al carrito
-            </Button>
+            <AddCartButton />
           </div>
         </div>
         
