@@ -3,8 +3,7 @@ import ItemListContainer from '../../components/ItemListContainer/ItemListContai
 import { Link } from "react-router-dom";
 import { db } from '../../firebase/firebaseConfig.js';
 import { collection, query, getDocs } from "firebase/firestore";
-
-
+import "./ItemList.css"
 
 
 const ItemList = () => {
@@ -35,8 +34,8 @@ const ItemList = () => {
                             <ItemListContainer product = { product }  />
                         </Link>
                     </div>
-                );
-            })};
+                )
+            })}
         </div>
     )
 }

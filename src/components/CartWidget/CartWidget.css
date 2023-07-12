@@ -3,6 +3,7 @@
     align-items: center;
 }
 
-p{
+nav p{
     margin-left: 2px;
+    color: white;
 }

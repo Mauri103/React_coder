@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.propiedades{
+    width: 40%;
+    
+}
+
+.propiedades div{
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.imagenProducto img{
+    height: 375px;
+    width: 330px;
+}
+
+

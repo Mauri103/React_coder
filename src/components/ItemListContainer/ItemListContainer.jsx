@@ -8,9 +8,9 @@ import { CardActionArea } from "@mui/material";
 
 const ItemListContainer = ({ product }) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ Width: 345 }}>
       <CardActionArea>
-        <CardMedia component="img" className="imgItem" src={product.image}  alt="" />
+        <CardMedia sx={{width: 345, height: 370}} component="img" className="imgItem" src={product.image}  alt="" />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {product.name}
@@ -21,8 +21,7 @@ const ItemListContainer = ({ product }) => {
         </CardContent>
       </CardActionArea>
     </Card>
-  );
-
+  )
 };
 
 export default ItemListContainer;

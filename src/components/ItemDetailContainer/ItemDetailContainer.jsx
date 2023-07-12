@@ -1,26 +1,32 @@
 import * as React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
+import Button from '@mui/material/Button';
+import "./ItemDetailContainer.css"
 
 const ItemDetailConteiner = ({ product }) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia component="img" className="imgItem" src={product.image}  alt="" />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {product.name}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {product.category} | $ {product.price}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-  );
+    <div className="detail">  
+        <div className="imagenProducto">
+          <img src={product.image} alt=""/>
+        </div>      
+        <div className="propiedades">
+          <div>
+              <h1>{product.name}</h1>
+          </div>
+          <div>
+              <p>{product.description}</p>
+          </div>
+          <div className="price">
+              <h3>$ {product.price}</h3>
+          </div>
+          <div>
+            <Button variant="contained" color="primary">
+                Agregar al carrito
+            </Button>
+          </div>
+        </div>
+        
+    </div>
+  )
 
 };
 

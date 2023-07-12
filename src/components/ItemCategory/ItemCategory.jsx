@@ -1,12 +1,13 @@
-import React, { useState , useEffect }from 'react'
-import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer.jsx';
+import React, { useState , useEffect} from 'react'
+import ItemListContainer from '../../components/ItemListContainer/ItemListContainer.jsx'
+import { Link } from "react-router-dom";
 import { useParams } from 'react-router-dom'
 import { db } from '../../firebase/firebaseConfig.js';
 import { collection, query, getDocs } from "firebase/firestore";
-import "./ItemDetail.css";
+import "./ItemCategory.css"
 
-const ItemDetail = () => {
-    let { id } = useParams();
+const ItemCategory = () => {
+    let { categoryId } = useParams();
 
     const [products, setProducts] = useState([]);
 
@@ -25,25 +26,25 @@ const ItemDetail = () => {
     }, []);
 
 
-    let filtroProductos = products.filter((product) => {
-      return product.id === id;
+    let filtroCategoria = products.filter((product) => {
+      return product.categoryID === categoryId;
     })
-   
-    return (
-      <div>      
-            {filtroProductos.map(( product ) => {
+
+  return (
+        <div className='contenido'>       
+            {filtroCategoria.map(( product ) => {
                 return(
-                    <div className='' key={product.id}>
-                        <div>
-                            <ItemDetailContainer 
+                    <div key={product.id}>
+                        <Link to={`/detail/${product.id}`}>
+                            <ItemListContainer 
                                 product = { product }
                             />
-                        </div>
-                    </div> 
+                        </Link>
+                   </div> 
                 )
             })}
         </div>
-    )
+   )
 }
 
-export default ItemDetail
+export default ItemCategory
