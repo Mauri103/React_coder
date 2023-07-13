@@ -49,13 +49,14 @@ function Carrousel(args) {
   const slides = items.map((item) => {
     return (
       <CarouselItem
+        className='carousel'
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
         key={item.src}
       >
         <img className="imageCarousel" src={item.src} alt={item.altText}/>
         <CarouselCaption
-          captionHeader={item.caption}
+          captionText={item.caption}
         />
       </CarouselItem>
     );

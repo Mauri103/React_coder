@@ -9,17 +9,17 @@ import AddCartButton from "../AddCartButton/AddCartButton";
 
 const ItemListContainer = ({ product }) => {
   return (
-    <Card sx={{ Width: 345 }}>
-      <CardActionArea>
-        <CardMedia sx={{width: 345, height: 370}} component="img" className="imgItem" src={product.image}  alt="" />
+    <Card sx={{ Width: 200, background: "#5c5c61", margin: 0}}>
+      <CardActionArea className="action">
+        <CardMedia sx={{borderRadius: 10,padding: 2, width: 270, height: 370, justifyContent: 'center'}} component="img" className="imgItem" src={product.image}  alt="" />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography sx={{color: "white"}} gutterBottom variant="h5" component="div">
             {product.name}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography sx={{color: "white"}} variant="p" color="text.secondary">
             {product.category} | $ {product.price}
           </Typography>
-          <AddCartButton className="botonAdd" />
+          <AddCartButton />
         </CardContent>
       </CardActionArea>
     </Card>

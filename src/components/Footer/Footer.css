@@ -1,0 +1,67 @@
+.footerMain{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(5, 5, 5);
+    margin-top: 70px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #e3fc02cf;
+}
+
+.tarjetas img{
+    width: 50px;
+}
+
+.tarjetas{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.logoFooter{
+    width: 160px;
+    height: 200px;
+}
+
+.metodos h3{
+    color: black;
+    margin: 0;
+}
+
+.seguinos h3{
+    color: black;
+    margin: 0;
+}
+
+.icon{
+    width: 30px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 15px;
+
+}
+
+.icon p{
+    margin: 0;
+    margin-left: 15px;
+}
+
+.copy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.copy img{
+    width: 190px;
+    height: 160px;
+}
+
+.seguinos{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}

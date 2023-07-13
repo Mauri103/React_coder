@@ -9,7 +9,7 @@ import CartWidget from '../CartWidget/CartWidget';
 const Navbar = () => {
   return (
     <nav>
-      <div className='botones'>
+      <div className='container botones'>
         <div className='menu'>
           <Button className='menu' sx={{color: 'white'}}>
             <Link className="li" to="/">Inicio</Link>

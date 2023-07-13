@@ -5,6 +5,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
 import "./AccordionMenu.css"
 import { Link } from "react-router-dom";
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 
 export default function FadeMenu() {
@@ -28,6 +29,7 @@ export default function FadeMenu() {
         onClick={handleClick}
       >
         Categorías
+      <ExpandMoreIcon sx={{ml: 2}} />
       </Button>
       <Menu
         id="fade-menu"
@@ -40,7 +42,7 @@ export default function FadeMenu() {
         TransitionComponent={Fade}
       >
         <Link onClick={handleClose} to="/category/2"><MenuItem className='item'>Pantalones</MenuItem></Link>
-        <Link onClick={handleClose} to="/category/1"><MenuItem className='item'>Remeras</MenuItem></Link>
+        <Link onClick={handleClose} to="/category/1"><MenuItem className='item'>Camisetas</MenuItem></Link>
       </Menu>
     </div>
   );

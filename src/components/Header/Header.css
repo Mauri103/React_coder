@@ -1,11 +1,11 @@
 .header{
     display: flex;
     justify-content: center;
-    background-color: black;
+    background-color: #242427;
     padding: 20px;
 }
 
 img{
-    width: 150px;
-    height: 65px;
+    width: 90px;
+    height: 60px;
 }

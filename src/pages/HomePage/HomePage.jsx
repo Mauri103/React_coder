@@ -7,7 +7,7 @@ const HomePage = () => {
     return(
         <div>    
            <Carrousel />
-           <h3>Catalogo completo</h3>
+           <h3>Catálogo completo</h3>
            <ItemList />
         </div>
     )

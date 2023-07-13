@@ -4,8 +4,8 @@ import Button from '@mui/material/Button';
 
 const AddCartButton = () => {
   return (
-    <div>
-        <Button variant="contained" color="primary">
+    <div className='boton'>
+        <Button sx={{color: 'black', background: '#e3fc02cf'}} variant="contained" color="primary">
             Agregar al carrito
         </Button>
     </div>

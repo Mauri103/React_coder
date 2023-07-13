@@ -28,10 +28,24 @@ const ItemCategory = () => {
 
     let filtroCategoria = products.filter((product) => {
       return product.categoryID === categoryId;
-    })
+    });
 
-  return (
-        <div className='contenido'>       
+    const titulo = () => {
+        if(categoryId === "1"){
+            return <h2>Camisetas</h2>
+        }else if(categoryId === "2"){
+            return <h2>Pantalones</h2>
+        }else{
+            return <h2>Gorros</h2>
+        }
+    }
+  
+    return (
+    <div>
+        <div className='container titulo'>
+            {titulo()}
+        </div>
+        <div className='container contenido'>   
             {filtroCategoria.map(( product ) => {
                 return(
                     <div className='carts' key={product.id}>
@@ -44,6 +58,7 @@ const ItemCategory = () => {
                 )
             })}
         </div>
+    </div>
    )
 }
 

@@ -8,6 +8,7 @@ import Navbar from './components/NavBar/NavBar';
 import HomePage from "./pages/HomePage/HomePage";
 import CategoryPage from "./pages/CategoryPage/CategoryPage";
 import DetailPage from "./pages/DetailPage/DetailPage";
+import Footer from "./components/Footer/Footer";
 
 
 
@@ -23,6 +24,7 @@ const App  = () => {
           <Route path="/category/:categoryId" element={<CategoryPage />} />
           <Route path="/detail/:id" element={<DetailPage />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

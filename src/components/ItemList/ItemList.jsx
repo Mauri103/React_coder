@@ -23,10 +23,9 @@ const ItemList = () => {
         getProducts();
     }, []);
 
-    console.log(products);
     
     return(
-        <div className='contenido'>       
+        <div className='container contenido'>       
             {products.map(( product ) => {
                 return(
                     <div className='carts' key={product.id}>

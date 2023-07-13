@@ -1,8 +1,14 @@
 .contenido{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
     margin-top: 30px;
     align-items: center;
     justify-items: center;
+}
+
+.titulo{
+    color: white;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }

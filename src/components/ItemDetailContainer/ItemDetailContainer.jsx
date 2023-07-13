@@ -4,7 +4,7 @@ import AddCartButton from "../AddCartButton/AddCartButton";
 
 const ItemDetailConteiner = ({ product }) => {
   return (
-    <div className="detail">  
+    <div className="container detail">  
         <div className="imagenProducto">
           <img src={product.image} alt=""/>
         </div>      
