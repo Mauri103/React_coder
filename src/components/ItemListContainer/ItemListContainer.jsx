@@ -5,7 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
-import AddCartButton from "../AddCartButton/AddCartButton";
+import ButtonDetail from "../ButtonDetail/ButtonDetail";
 
 const ItemListContainer = ({ product }) => {
   return (
@@ -19,8 +19,8 @@ const ItemListContainer = ({ product }) => {
           <Typography sx={{color: "white"}} variant="p" color="text.secondary">
             {product.category} | $ {product.price}
           </Typography>
-          <AddCartButton />
         </CardContent>
+      <ButtonDetail />
       </CardActionArea>
     </Card>
   )

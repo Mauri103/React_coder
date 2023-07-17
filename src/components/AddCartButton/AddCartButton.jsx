@@ -1,13 +1,18 @@
-import React from 'react';
-import Button from '@mui/material/Button';
+import React, { useContext } from 'react'
+import { ProductContext } from '../../context/ProductContext';
+import "./AddCartButton.css"
 
 
-const AddCartButton = () => {
+
+const AddCartButton = ({ product }) => {
+  const [products, addToCart ] = useContext(ProductContext);
+  const add = () =>{
+    addToCart(product);
+  }
+
   return (
-    <div className='boton'>
-        <Button sx={{color: 'black', background: '#e3fc02cf'}} variant="contained" color="primary">
-            Agregar al carrito
-        </Button>
+    <div className='addCart'>       
+        <p onClick={add}>Agregar al carrito</p>
     </div>
   )
 }

@@ -2,9 +2,11 @@ import * as React from "react";
 import "./ItemDetailContainer.css"
 import AddCartButton from "../AddCartButton/AddCartButton";
 
+
 const ItemDetailConteiner = ({ product }) => {
+
   return (
-    <div className="container detail">  
+    <div className="container detail">
         <div className="imagenProducto">
           <img src={product.image} alt=""/>
         </div>      
@@ -19,7 +21,7 @@ const ItemDetailConteiner = ({ product }) => {
               <h3>$ {product.price}</h3>
           </div>
           <div>
-            <AddCartButton />
+            <AddCartButton product={product}/>
           </div>
         </div>
         
