@@ -1,6 +1,5 @@
 import React, { useState , useEffect} from 'react'
 import ItemListContainer from '../../components/ItemListContainer/ItemListContainer.jsx'
-import { Link } from "react-router-dom";
 import { useParams } from 'react-router-dom'
 import { db } from '../../firebase/firebaseConfig.js';
 import { collection, query, getDocs } from "firebase/firestore";
@@ -45,7 +44,7 @@ const ItemCategory = () => {
         <div className='container titulo'>
             {titulo()}
         </div>
-        <div className='container contenido'>   
+        <div className='container-fluid contenido'>   
             {filtroCategoria.map(( product ) => {
                 return(
                     <div className='carts' key={product.id}>

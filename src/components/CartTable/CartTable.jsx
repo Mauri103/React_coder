@@ -11,6 +11,14 @@ import FinishModal from '../FinishModal/FinishModal';
 
 const CartTable = () => {
   const [products, addToCart, deleteItem, setProducts ] = useContext(ProductContext);
+  let total = 0;
+
+  const calcTotal = () => {
+    products.map(product => (
+      total = total + Math.floor(product.price) * Math.floor(product.quantity)
+    ))
+  }
+  calcTotal()
  
   const deleteProduct = (id) => {
     const foundId = products.find((element) => element.id === id);
@@ -24,9 +32,10 @@ const CartTable = () => {
 
   return (
     <div>
-      <Table borderless>
+      <h1>Carrito de compras</h1>
+      <Table dark bordered hover>
         <thead>
-          <tr>
+          <tr className=''>
             <th>
               Eliminar
             </th>
@@ -47,17 +56,29 @@ const CartTable = () => {
               <tr className="align-self-center" key={product.id}>
                   <td onClick={() => deleteProduct(product.id)}><DeleteIcon /></td>
                   <td>{product.name}</td>
-                  <td className='d-flex justify-content-between'>
-                    <HorizontalRuleIcon onClick={() => deleteItem(product)}/>
-                    {product.quantity}
-                    <AddIcon onClick={() => addToCart(product)}/>
+                  <td className='d-flex justify-content-between borderless	
+'>
+                      <HorizontalRuleIcon onClick={() => deleteItem(product)}/>
+                      ${product.quantity}
+                      <AddIcon onClick={() => addToCart(product)}/>
                   </td>
                   <td>${product.price}</td>
                   <td>${product.price * product.quantity}</td>
-                  
               </tr>
           ))}
         </thead>    
+      </Table>
+      <Table dark bordered hover className='tablaTotal'>
+        <thead>
+          <tr className=''>
+            <th className='total'>
+              Total
+            </th>
+            <th className='totalMonto'>
+              ${total}
+            </th>
+          </tr>
+        </thead>
       </Table>
       <FinishModal />
     </div>

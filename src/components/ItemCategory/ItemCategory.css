@@ -1,6 +1,6 @@
 .contenido{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, auto);
     gap: 30px;
     margin-top: 30px;
     align-items: center;

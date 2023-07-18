@@ -4,7 +4,6 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
 import ButtonDetail from "../ButtonDetail/ButtonDetail";
 import { Link } from "react-router-dom";
 import AddCartButton from "../AddCartButton/AddCartButton";

@@ -17,12 +17,6 @@ const items = [
     caption: 'Pantalones',
     key: 2,
   },
-  {
-    src: 'https://firebasestorage.googleapis.com/v0/b/bunker-store-2dbd4.appspot.com/o/gorras-punto-vista-superior.jpg?alt=media&token=421535c2-b550-45c4-94a7-ef9e31df9293',
-    altText: '',
-    caption: 'Gorros de invierno',
-    key: 3,
-  },
 ];
 
 function Carrousel(args) {

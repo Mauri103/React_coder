@@ -24,7 +24,7 @@ const ItemList = () => {
 
     
     return(
-        <div className='container contenido'>       
+        <div className='cpnteiner-fluid contenido'>       
             {products.map(( product ) => {
                 return(
                     <div className='carts' key={product.id}>

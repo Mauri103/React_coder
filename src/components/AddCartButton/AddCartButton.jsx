@@ -5,7 +5,7 @@ import "./AddCartButton.css"
 
 
 const AddCartButton = ({ product }) => {
-  const [products, addToCart ] = useContext(ProductContext);
+  const [ products, addToCart ] = useContext(ProductContext);
   const add = () =>{
     addToCart(product);
   }

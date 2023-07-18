@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import "./FinishModal.css"
 import { db } from '../../firebase/firebaseConfig.js';
 import { collection, addDoc} from "firebase/firestore";
+import SuccessMessage from '../SuccessMessage/SuccessMessage';
 
 function getDate(){
     let today = new Date();
@@ -24,6 +25,7 @@ const FinishPage = (props) => {
 
   const [products] = useContext(ProductContext);
   const [data, setData] = useState(initialState);
+  const [purchaseID, setPurchaseID] = useState(null)
 
 
   const handleOnChange = (e) => {
@@ -40,7 +42,7 @@ const FinishPage = (props) => {
       data,
       products
     });
-    console.log("Document written with ID: ", docRef.id);
+    setPurchaseID(docRef.id);
     setData(initialState);
     console.log(data)
   };
@@ -52,7 +54,7 @@ const FinishPage = (props) => {
   const toggle = () => setModal(!modal);
 
   return (
-    <div>
+    <div className='finalizarCompra'>
       <Button sx={{mt: 5}} onClick={toggle}>
         Finalizar compra
       </Button>
@@ -83,8 +85,11 @@ const FinishPage = (props) => {
               value={data.telephone}
               onChange={handleOnChange}
             />
-            <button className="btnASendAction">Send</button>
+            <div className='input'>
+              <button className="btnASendAction">Send</button>
+            </div>
           </form>
+          {purchaseID ? <SuccessMessage id={purchaseID} /> : null}
         </ModalBody>
       </Modal>
     

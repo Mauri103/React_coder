@@ -1,3 +1,8 @@
+table{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 .columnaCantidad{
     display: flex;
 }
@@ -5,6 +10,7 @@
 .finalizarCompra{
     display: flex;
     justify-content: flex-end;
+    margin-top: 50px;
 }
 
 .finalizarCompra p:hover{
@@ -22,4 +28,17 @@
     justify-self: center;
     background-color: #e3fc02cf;
     transition: all .5s ease;
+}
+
+.tablaTotal{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.total{
+    width: 150px;
+}
+
+.totalMonto{
+    width: 175px;
 }
