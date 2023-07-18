@@ -28,8 +28,12 @@ const ItemDetail = () => {
     let filtroProductos = products.filter((product) => {
       return product.id === id;
     })
-   
+
+    let array = filtroProductos.length;
+
     return (
+    <div className='itemDetail'>
+      {array === 0 ? <h1 className='mt-5'>El producto ingresado no existe</h1> :
       <div>      
             {filtroProductos.map(( product ) => {
                 return(
@@ -42,7 +46,9 @@ const ItemDetail = () => {
                     </div> 
                 )
             })}
-        </div>
+        </div>}
+    </div>
+
     )
 }
 

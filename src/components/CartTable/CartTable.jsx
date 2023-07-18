@@ -56,8 +56,7 @@ const CartTable = () => {
               <tr className="align-self-center" key={product.id}>
                   <td onClick={() => deleteProduct(product.id)}><DeleteIcon /></td>
                   <td>{product.name}</td>
-                  <td className='d-flex justify-content-between borderless	
-'>
+                  <td className='d-flex justify-content-between borderless'>
                       <HorizontalRuleIcon onClick={() => deleteItem(product)}/>
                       ${product.quantity}
                       <AddIcon onClick={() => addToCart(product)}/>

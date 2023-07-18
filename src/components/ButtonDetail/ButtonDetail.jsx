@@ -2,7 +2,6 @@ import React from 'react'
 import "./ButtonDetail.css"
 
 
-
 const ButtonDetail = () => {
   
   return (

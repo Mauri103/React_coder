@@ -44,7 +44,6 @@ const FinishPage = (props) => {
     });
     setPurchaseID(docRef.id);
     setData(initialState);
-    console.log(data)
   };
 
 

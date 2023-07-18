@@ -9,7 +9,7 @@ const CartPage = () => {
 
   return (
     <div className='container justify-content-center mt-4 cart'>
-      {products.length > 0 ? <CartTable /> : <h1>Tu carrito está vacío</h1>}
+      {products.length > 0 ? <CartTable /> : <h1 className='mt-5'>Tu carrito está vacío</h1>}
     </div>
   )
 }
