@@ -20,7 +20,7 @@ const ItemDetailConteiner = ({ product }) => {
           <div className="price">
               <h3>$ {product.price}</h3>
           </div>
-          <div>
+          <div className="addDetail">
             <AddCartButton product={product}/>
           </div>
         </div>

@@ -36,7 +36,7 @@ const ItemCategory = () => {
         }else if(categoryId === "2"){
             return <h2>Pantalones</h2>
         }else{
-            return <h2>Gorros</h2>
+            return <h2>Lo sentimos, la categoría que buscas no existe</h2>
         }
     }
   
@@ -49,11 +49,9 @@ const ItemCategory = () => {
             {filtroCategoria.map(( product ) => {
                 return(
                     <div className='carts' key={product.id}>
-                        <Link to={`/detail/${product.id}`}>
                             <ItemListContainer 
                                 product = { product }
                             />
-                        </Link>
                    </div> 
                 )
             })}

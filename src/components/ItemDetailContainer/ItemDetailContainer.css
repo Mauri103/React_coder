@@ -34,3 +34,10 @@
     color: white;
 }
 
+.addDetail p{
+    color: black;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+}
+

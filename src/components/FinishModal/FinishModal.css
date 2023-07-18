@@ -1,0 +1,29 @@
+.modal{
+    margin-top: 100px;
+}
+
+.btn{
+    background-color: #e3fc02cf;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid #a2b30bcf;
+
+    
+}
+
+.btn:hover{
+    background-color: #a2b30bcf;
+    transition: all .5s ease;
+    color: black;
+    border: 1px solid #a2b30bcf;
+}
+
+.input{
+    margin-top: 15px;
+    width: 250px;
+    align-self: center;
+    border: 2px solid grey;
+    border-radius: 20px;
+    padding: 8px;
+}

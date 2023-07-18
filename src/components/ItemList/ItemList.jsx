@@ -1,6 +1,5 @@
 import React, { useState , useEffect} from 'react'
 import ItemListContainer from '../../components/ItemListContainer/ItemListContainer.jsx'
-import { Link } from "react-router-dom";
 import { db } from '../../firebase/firebaseConfig.js';
 import { collection, query, getDocs } from "firebase/firestore";
 import "./ItemList.css"
@@ -29,10 +28,7 @@ const ItemList = () => {
             {products.map(( product ) => {
                 return(
                     <div className='carts' key={product.id}>
-                        <Link to={`detail/${product.id}`}>
-                            <ItemListContainer product = { product }  />
-                        </Link>
-                        
+                            <ItemListContainer product = { product }  />                        
                     </div>
                 )
             })}

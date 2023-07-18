@@ -1,9 +1,9 @@
 .verDetalles p{
     border-radius: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     margin-top: 20px;
-    padding: 10px;
-    width: 150px;
+    padding: 5px;
+    width: 180px;
     text-align: center;
     justify-self: center;
     background-color: #e3fc02cf;
@@ -14,8 +14,6 @@
 .verDetalles p:hover{
     background-color: #a2b30bcf;
     transition: all .5s ease;
-
-
 }
 
 

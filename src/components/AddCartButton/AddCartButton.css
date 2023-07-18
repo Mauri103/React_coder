@@ -1,24 +1,20 @@
 .addCart p{
     border-radius: 10px;
     margin-bottom: 30px;
-    margin-top: 20px;
-    background-color: aqua;
-    padding: 10px;
-    width: 150px;
+    margin-top: 10px;
+    padding: 5px;
+    width: 180px;
     text-align: center;
     justify-self: center;
     background-color: #e3fc02cf;
     transition: all .5s ease;
     color: black;
     cursor: pointer;
-
 }
 
 .addCart p:hover{
     background-color: #a2b30bcf;
     transition: all .5s ease;
-
-
 }
 
 

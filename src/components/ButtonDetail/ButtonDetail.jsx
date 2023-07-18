@@ -7,7 +7,7 @@ const ButtonDetail = () => {
   
   return (
     <div className='verDetalles'>
-        <p>Ver detalles</p>
+        <p>Ver más detalles</p>
     </div>
   )
 }

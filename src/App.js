@@ -10,7 +10,8 @@ import CategoryPage from "./pages/CategoryPage/CategoryPage";
 import DetailPage from "./pages/DetailPage/DetailPage";
 import Footer from "./components/Footer/Footer";
 import { ProductProvider } from "./context/ProductContext";
-
+import CartPage from "./pages/CartPage/CartPage";
+import FinishStepper from "./components/FinishModal/FinishModal";
 
 
 const App  = () => {
@@ -22,9 +23,11 @@ const App  = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/cart" element={<CartPage />} />
             <Route path="/category/:categoryId" element={<CategoryPage />} />
             <Route path="/category/:categoryId" element={<CategoryPage />} />
             <Route path="/detail/:id" element={<DetailPage />} />
+            <Route path="/finish" element={<FinishStepper />} />
           </Routes>
           <Footer />
         </div>
