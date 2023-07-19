@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Mauri103/React_coder.git/static/css/main.b892b732.css",
-    "main.js": "/Mauri103/React_coder.git/static/js/main.129fa6a1.js",
-    "static/media/logo_bunker.avif": "/Mauri103/React_coder.git/static/media/logo_bunker.7a086a5de99fa6706331.avif",
-    "static/media/logo-oca.svg": "/Mauri103/React_coder.git/static/media/logo-oca.9ba226802a285b1848c25412bbb9c731.svg",
-    "static/media/logo-visa.svg": "/Mauri103/React_coder.git/static/media/logo-visa.09953ba9b03e117af79bbd507fdada1a.svg",
-    "static/media/logo-master.svg": "/Mauri103/React_coder.git/static/media/logo-master.8cf352d1eaebcc73e298b235b5d14f0a.svg",
-    "index.html": "/Mauri103/React_coder.git/index.html",
-    "main.b892b732.css.map": "/Mauri103/React_coder.git/static/css/main.b892b732.css.map",
-    "main.129fa6a1.js.map": "/Mauri103/React_coder.git/static/js/main.129fa6a1.js.map"
+    "main.css": "/React_coder/static/css/main.b892b732.css",
+    "main.js": "/React_coder/static/js/main.4340e7a5.js",
+    "static/media/logo_bunker.avif": "/React_coder/static/media/logo_bunker.7a086a5de99fa6706331.avif",
+    "static/media/logo-oca.svg": "/React_coder/static/media/logo-oca.9ba226802a285b1848c25412bbb9c731.svg",
+    "static/media/logo-visa.svg": "/React_coder/static/media/logo-visa.09953ba9b03e117af79bbd507fdada1a.svg",
+    "static/media/logo-master.svg": "/React_coder/static/media/logo-master.8cf352d1eaebcc73e298b235b5d14f0a.svg",
+    "index.html": "/React_coder/index.html",
+    "main.b892b732.css.map": "/React_coder/static/css/main.b892b732.css.map",
+    "main.4340e7a5.js.map": "/React_coder/static/js/main.4340e7a5.js.map"
   },
   "entrypoints": [
     "static/css/main.b892b732.css",
-    "static/js/main.129fa6a1.js"
+    "static/js/main.4340e7a5.js"
   ]
 }
