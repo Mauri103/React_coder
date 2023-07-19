@@ -3,12 +3,19 @@ import ItemListContainer from '../../components/ItemListContainer/ItemListContai
 import { db } from '../../firebase/firebaseConfig.js';
 import { collection, query, getDocs } from "firebase/firestore";
 import "./ItemList.css"
+import Spinner from '../Spinner/Spinner.jsx';
 
 
 const ItemList = () => {
     const [products, setProducts] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    
+    
 
     useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 1500);
         const getProducts = async () => {
         const q = query(collection(db, "productsCollection"));
         const docs = [];
@@ -24,14 +31,17 @@ const ItemList = () => {
 
     
     return(
-        <div className='cpnteiner-fluid contenido'>       
-            {products.map(( product ) => {
-                return(
-                    <div className='carts' key={product.id}>
-                            <ItemListContainer product = { product }  />                        
-                    </div>
-                )
-            })}
+        <div>
+            {isLoading ? (<Spinner />) : 
+            <div className='conteiner-fluid contenido'>
+                {products.map(( product ) => {
+                    return(
+                        <div className='carts' key={product.id}>
+                                <ItemListContainer product = { product }  />                        
+                        </div>
+                    )
+                })}
+            </div>}
         </div>
     )
 }

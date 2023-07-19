@@ -1,0 +1,6 @@
+.spinner span{
+    margin-top: 150px;
+    margin-bottom: 150px;
+    color: #e3fc02cf;
+    animation:  animation-61bdi0 3s linear infinite;
+}

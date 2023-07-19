@@ -4,13 +4,20 @@ import { useParams } from 'react-router-dom'
 import { db } from '../../firebase/firebaseConfig.js';
 import { collection, query, getDocs } from "firebase/firestore";
 import "./ItemCategory.css"
+import Spinner from '../Spinner/Spinner.jsx';
+
 
 const ItemCategory = () => {
     let { categoryId } = useParams();
 
     const [products, setProducts] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+
 
     useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 2000);
         const getProducts = async () => {
         const q = query(collection(db, "productsCollection"));
         const docs = [];
@@ -41,20 +48,23 @@ const ItemCategory = () => {
   
     return (
     <div>
-        <div className='container titulo'>
-            {titulo()}
-        </div>
-        <div className='container-fluid contenido'>   
-            {filtroCategoria.map(( product ) => {
-                return(
-                    <div className='carts' key={product.id}>
-                            <ItemListContainer 
-                                product = { product }
-                            />
-                   </div> 
-                )
-            })}
-        </div>
+        {isLoading ? (<Spinner />) :
+            <div>
+                <div className='container titulo'>
+                    {titulo()}
+                </div>
+                <div className='container-fluid contenido'>   
+                    {filtroCategoria.map(( product ) => {
+                        return(
+                            <div className='carts' key={product.id}>
+                                    <ItemListContainer 
+                                        product = { product }
+                                    />
+                        </div> 
+                        )
+                    })}
+            </div>
+        </div>}
     </div>
    )
 }
