@@ -58,7 +58,7 @@ const CartTable = () => {
                   <td>{product.name}</td>
                   <td className='d-flex justify-content-between borderless'>
                       <HorizontalRuleIcon onClick={() => deleteItem(product)}/>
-                      ${product.quantity}
+                      {product.quantity}
                       <AddIcon onClick={() => addToCart(product)}/>
                   </td>
                   <td>${product.price}</td>
