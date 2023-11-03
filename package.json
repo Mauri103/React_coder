@@ -1,7 +1,7 @@
 {
   "name": "react-coder",
   "version": "0.1.0",
-  "homepage": "https://mauri103.github.io/",
+  "homepage": "https://github.com/Mauri103/React_coder.git",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",

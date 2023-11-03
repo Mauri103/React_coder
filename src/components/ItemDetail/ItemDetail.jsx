@@ -4,20 +4,13 @@ import { useParams } from 'react-router-dom'
 import { db } from '../../firebase/firebaseConfig.js';
 import { collection, query, getDocs } from "firebase/firestore";
 import "./ItemDetail.css";
-import Spinner from '../Spinner/Spinner.jsx';
-
 
 const ItemDetail = () => {
     let { id } = useParams();
 
     const [products, setProducts] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-
 
     useEffect(() => {
-        setTimeout(() => {
-            setIsLoading(false);
-        }, 1500);
         const getProducts = async () => {
         const q = query(collection(db, "productsCollection"));
         const docs = [];
@@ -39,23 +32,20 @@ const ItemDetail = () => {
     let array = filtroProductos.length;
 
     return (
-    <div>
-        {isLoading ? (<Spinner />) : 
-        <div className='itemDetail'>
-        {array === 0 ? <h1 className='mt-5'>El producto ingresado no existe</h1> :
-        <div>      
-                {filtroProductos.map(( product ) => {
-                    return(
-                        <div className='' key={product.id}>
-                            <div>
-                                <ItemDetailContainer 
-                                    product = { product }
-                                />
-                            </div>
-                        </div> 
-                    )
-                })}
-            </div>}
+    <div className='itemDetail'>
+      {array === 0 ? <h1 className='mt-5'>El producto ingresado no existe</h1> :
+      <div>      
+            {filtroProductos.map(( product ) => {
+                return(
+                    <div className='' key={product.id}>
+                        <div>
+                            <ItemDetailContainer 
+                                product = { product }
+                            />
+                        </div>
+                    </div> 
+                )
+            })}
         </div>}
     </div>
 
